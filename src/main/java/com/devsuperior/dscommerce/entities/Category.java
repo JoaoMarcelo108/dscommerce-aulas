@@ -9,7 +9,7 @@ import java.util.Set;
 @Table(name = "tb_category")
 public class Category {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;

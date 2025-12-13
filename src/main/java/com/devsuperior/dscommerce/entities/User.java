@@ -10,7 +10,7 @@ import java.util.List;
 @Table(name = "tb_user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -20,7 +20,7 @@ public class User {
 
     private String phone;
 
-    private LocalDate LocalDate;
+    private LocalDate birthDate;
 
     private String password;
 
@@ -29,12 +29,12 @@ public class User {
 
     public User() {}
 
-    public User(Long id, String name, String email, String phone, LocalDate localDate, String password) {
+    public User(Long id, String name, String email, String phone, LocalDate birthDate, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
-        LocalDate = localDate;
+        birthDate = birthDate;
         this.password = password;
     }
 
@@ -70,12 +70,12 @@ public class User {
         this.phone = phone;
     }
 
-    public LocalDate getLocalDate() {
-        return LocalDate;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setLocalDate(LocalDate localDate) {
-        LocalDate = localDate;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getPassword() {
